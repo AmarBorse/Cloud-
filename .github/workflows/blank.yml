@@ -1,9 +1,0 @@
-name: Say Hello 
-on: push
-jobs:
- build:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: action/checkout@v4
-    - run: echo " Build started for $GITHUB_SHA"
-    - run: ls -la
