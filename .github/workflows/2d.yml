@@ -1,0 +1,12 @@
+jobs:
+  test:  
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: ["18", "20"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: action/checkout@v4
+      - uses: action/setupnode@v4
+        with: 
+          node-version: ${{ matrix.node }}
